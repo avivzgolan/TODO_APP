@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+````markdown
+# TODO_APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TODO_APP is a full-stack application designed for managing duties or tasks. The application consists of two main services:
 
-## Available Scripts
+- **Frontend**: A React-based user interface for managing your duties.
+- **Backend**: An Express-based API for handling CRUD operations on duties, backed by a PostgreSQL database.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+The project is structured into two main directories: `frontend` and `backend`. Each service has its own readme file with detailed information about setup, configuration, and usage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Frontend**: [Frontend README](./frontend/README.md)
+- **Backend**: [Backend README](./backend/README.md)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Create, read, update, and delete duties.
+- User-friendly interface using Ant Design (AntD).
+- Persistent data storage using PostgreSQL.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Quick Setup with Docker Compose
 
-### `npm run build`
+For a quick setup, you can use Docker Compose to build and run both the frontend and backend services along with the PostgreSQL database. Here’s how:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Ensure that you have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed on your machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone git@github.com:avivzgolan/TODO_APP.git
+   cd TODO_APP
+   ```
+````
 
-### `npm run eject`
+3. Run the following command to build the images and start the services:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   docker-compose up --build
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Access the application:
+   - Frontend: [http://localhost:3000](http://localhost:3000)
+   - Backend: [http://localhost:4000](http://localhost:4000)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Feel free to reach out if you have any questions or need further assistance!
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Instructions for Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **`<git@github.com:avivzgolan/TODO_APP.git>`**:
+
+```

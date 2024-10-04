@@ -1,0 +1,6 @@
+.ant-form-inline .ant-form-item.duty-name-field {
+  margin-inline-end: 0;
+}
+.duty-name-field .ant-form-item-explain-error {
+  position: absolute;
+}
