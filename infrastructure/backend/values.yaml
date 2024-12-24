@@ -1,0 +1,11 @@
+microservice:
+  name: duty-manager-backend
+  namespace: duty-manager
+  replicas: 1
+
+workload:
+  image: duty-manager-backend:latest
+  port: 4000
+  resources:
+    memory: "1Gi"
+    cpu: "128m"

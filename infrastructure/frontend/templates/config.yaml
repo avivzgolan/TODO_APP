@@ -1,0 +1,7 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ .Values.microservice.name }}-config
+  namespace: {{ .Values.microservice.namespace }}
+data:
+  REACT_APP_DUTY_MANAGER_BACKEND: {{ .Values.env.backend_host }}

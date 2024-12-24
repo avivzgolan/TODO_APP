@@ -10,7 +10,10 @@ const port = process.env.PORT || 4000;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      `http://${process.env.DUTY_MANAGER_FRONTEND}:${process.env.DUTY_MANAGER_FRONTEND_PORT}`,
+      `http://${process.env.DUTY_MANAGER_FRONTEND_HOST}`,
+    ],
   })
 );
 app.use(express.json());
@@ -22,7 +25,7 @@ app.get("/", (req, res) => {
 app.use("/duties", dutyRoutes);
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on port:${port}`);
 });
 
 export default app;

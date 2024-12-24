@@ -26,6 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "react-scripts build && react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
@@ -62,5 +63,10 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "react-test-renderer": "^18.3.1"
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "DUTY_MANAGER_BACKEND"
+    ]
   }
 }

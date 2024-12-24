@@ -1,0 +1,17 @@
+microservice:
+  name: duty-manager-frontend
+  namespace: duty-manager
+  replicas: 1
+
+workload:
+  image: duty-manager-frontend:latest
+  port: 3000
+  resources:
+    memory: "2Gi"
+    cpu: "128m"
+
+env:
+  backend_name: duty-manager-backend
+  backend_port: 4000
+  frontend_host: frontend.localhost
+  backend_host: api.localhost

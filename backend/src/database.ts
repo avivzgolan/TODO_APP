@@ -6,7 +6,17 @@ import path from "path";
 dotenv.config();
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  user: process.env.DB_USER,
+  password: process.env.DB_USER_PASSWORD,
+  database: process.env.DB_NAME,
+  port: Number(process.env.DB_PORT),
+  host: process.env.DB_HOST,
+  ssl: {
+    ca: process.env.TLS_CA,
+    key: process.env.TLS_KEY,
+    cert: process.env.TLS_CERT,
+    rejectUnauthorized: true
+  },
 });
 
 const initializeDB = async () => {
