@@ -2,26 +2,37 @@
 
 This is the backend for the **Duty Manager** application, a simple RESTful API that handles CRUD operations for managing "Duties" (To-do items). The backend is built using **Node.js**, **Express**, and **TypeScript** in strict mode, and uses a **PostgreSQL** database for data persistence.
 
-## 📁 Project Structure
+## 🚀 Quick Setup Guide
 
-The project is structured as follows:
+Get up and running in minutes:
 
-```
-root                       # Root directory of the project
-├── init.sql               # SQL initialization script for setting up the database
-├── jest.config.js         # Configuration file for Jest testing framework
-├── package.json           # Project metadata, scripts, and dependencies
-├── README.md              # Documentation for the project
-├── tsconfig.json          # TypeScript configuration file for the project
-├── .gitignore             # Specifies files and directories to ignore in Git
-└── src                    # Source directory containing application code
-    ├── controllers        # Contains controller logic for handling requests and business logic
-    ├── models             # Defines database models and schemas
-    ├── routes             # Contains API route definitions for handling HTTP requests
-    ├── test               # Directory for unit and integration tests
-    ├── app.ts             # Main entry point for the Express application
-    └── database.ts        # Handles database connection and initialization logic
-```
+1. **Clone the repository:**
+   ```bash
+   git clone git@github.com:avivzgolan/TODO_APP.git
+   cd TODO_APP
+   ```
+
+2. **Make sure required services are running:**
+   - Docker service is running
+   - PostgreSQL service is running
+
+3. **Configure environment variables:**
+   ```bash
+   # Update the .env file in the backend directory
+   # Set your database credentials and other configuration
+   cd src/backend
+   cp .env.example .env  # If .env.example exists
+   # Edit .env file with your actual values
+   ```
+
+4. **Run with Docker Compose:**
+   ```bash
+   docker compose -f configs/docker/docker-compose.yml up --build
+   ```
+
+5. **Access the application:**
+   - Frontend: http://localhost:3000
+   - Backend: http://localhost:4000
 
 ---
 
@@ -68,24 +79,11 @@ npm install
 
 ### 3. Set up environment variables
 
-Create a `.env` file in the root of your project and define the following environment variables:
-
-```bash
-PORT=4000
-DATABASE_URL=postgres://username:password@localhost:5432/duties_db
-```
-
-Replace `username`, `password`, and `duties_db` with your PostgreSQL credentials.
+Create a `.env` file in the root of your backend project and define environment variables following the example file .env.example
 
 ### 4. Initialize the Database
 
-Make sure your PostgreSQL instance is running, then run the SQL initialization script:
-
-```bash
-psql -U postgres -f init.sql
-```
-
-This will create the `duties_db` database and the necessary table for storing duties.
+Make sure your PostgreSQL instance is running
 
 ### 5. Run the server
 
