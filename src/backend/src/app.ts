@@ -11,8 +11,7 @@ const port = process.env.PORT || 4000;
 app.use(
   cors({
     origin: [
-      `http://${process.env.DUTY_MANAGER_FRONTEND}:${process.env.DUTY_MANAGER_FRONTEND_PORT}`,
-      `http://${process.env.DUTY_MANAGER_FRONTEND_HOST}`,
+      `http://${process.env.DUTY_MANAGER_FRONTEND}`
     ],
   })
 );

@@ -36,7 +36,7 @@ For a quick setup, you can use Docker Compose to build and run both the frontend
 3. Run the following command to build the images and start the services:
 
    ```bash
-   docker-compose up --build
+   docker-compose -f ./configs/docker/docker-compose.yml up --build
    ```
 
 4. Access the application:
